@@ -188,13 +188,13 @@ static SDImageCache *instance;
         return;
     }
 
+    [memCache setObject:image forKey:key];
+
     if (toDisk && !data)
     {
         return;
     }
-
-    [memCache setObject:image forKey:key];
-
+    
     if (toDisk)
     {
         NSArray *keyWithData;
